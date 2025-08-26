@@ -29,7 +29,7 @@ def pixel_center_coords(transform, width, height):
     #X, Y = np.meshgrid(xs, ys)
     return xs, ys
 
-def reproject_numpy_to_equi7_eu_1km(
+def reproject_numpy_to_equi7_eu_10km(
     data, lons, lats, nodata=np.nan, resampling="bilinear"
 ):
 
@@ -181,7 +181,7 @@ def reproject_data(path, qa_threshold = 0.5, is_no2 = False):
         reprojected_avg_kernel = {}
 
         for var in gridded_avg_kernel:
-            arr_avg_10km, tr_avg_1km, crs_avg_1km = reproject_numpy_to_equi7_eu_1km(
+            arr_avg_10km, tr_avg_10km, crs_avg_10km = reproject_numpy_to_equi7_eu_10km(
                 gridded_avg_kernel[var], target_lon_full, target_lat_full,
                 nodata=np.nan,
                 resampling="bilinear"          
@@ -190,13 +190,13 @@ def reproject_data(path, qa_threshold = 0.5, is_no2 = False):
 
     for var in gridded_data:
         if var == "qa_value":
-            arr_10km, tr_1km, crs_1km = reproject_numpy_to_equi7_eu_1km(
+            arr_10km, tr_10km, crs_10km = reproject_numpy_to_equi7_eu_10km(
                 gridded_data[var], target_lon_full, target_lat_full,
                 nodata=np.nan,
                 resampling="nearest"          
             )
         else:
-            arr_10km, tr_1km, crs_1km = reproject_numpy_to_equi7_eu_1km(
+            arr_10km, tr_10km, crs_10km = reproject_numpy_to_equi7_eu_10km(
                 gridded_data[var], target_lon_full, target_lat_full,
                 nodata=np.nan,
                 resampling="bilinear"          
@@ -204,7 +204,7 @@ def reproject_data(path, qa_threshold = 0.5, is_no2 = False):
 
         reprojected[var] = (("y", "x"),arr_10km)
 
-    xs, ys = pixel_center_coords(tr_1km, arr_10km.shape[1], arr_10km.shape[0])
+    xs, ys = pixel_center_coords(tr_10km, arr_10km.shape[1], arr_10km.shape[0])
 
     sensing_time = delta_time["delta_time"].values[0][0].astype("datetime64[D]")
     
