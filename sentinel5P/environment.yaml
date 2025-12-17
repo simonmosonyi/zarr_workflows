@@ -1,0 +1,23 @@
+name: myenv
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - zarr
+  - ipykernel
+  - xarray
+  - oauthlib
+  - requests-oauthlib
+  - netcdf4
+  - matplotlib
+  - boto3
+  - s3fs
+  - shapely
+  - gdal=3.9
+  - rasterio=1.4
+  - proj>=9.4
+  - proj-data>=1.20
+  - pyproj>=3.6
+  - ipympl
+  - esda

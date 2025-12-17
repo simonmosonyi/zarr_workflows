@@ -1,0 +1,90 @@
+{
+  "shape": [
+    2690,
+    60,
+    90
+  ],
+  "data_type": "int16",
+  "chunk_grid": {
+    "name": "regular",
+    "configuration": {
+      "chunk_shape": [
+        30,
+        60,
+        90
+      ]
+    }
+  },
+  "chunk_key_encoding": {
+    "name": "default",
+    "configuration": {
+      "separator": "/"
+    }
+  },
+  "fill_value": -9999,
+  "codecs": [
+    {
+      "name": "sharding_indexed",
+      "configuration": {
+        "chunk_shape": [
+          30,
+          60,
+          90
+        ],
+        "codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "blosc",
+            "configuration": {
+              "typesize": 2,
+              "cname": "zstd",
+              "clevel": 5,
+              "shuffle": "shuffle",
+              "blocksize": 0
+            }
+          }
+        ],
+        "index_codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "crc32c"
+          }
+        ],
+        "index_location": "end"
+      }
+    }
+  ],
+  "attributes": {
+    "_FillValue": -9999,
+    "scale_factor": 1e-06,
+    "_ARRAY_DIMENSIONS": [
+      "time",
+      "y",
+      "x"
+    ],
+    "grid_mapping": "spatial_ref",
+    "units": "mol m-2",
+    "standard_name": "atmosphere_mole_content_of_sulfur_dioxide_standard_error",
+    "long_name": "precision of the total vertical column of sulfur dioxide for the polluted scenario derived from the total slant column",
+    "multiplication_factor_to_convert_to_DU": 2241.14990234375,
+    "multiplication_factor_to_convert_to_molecules_percm2": 6.022139974343092e+19
+  },
+  "dimension_names": [
+    "time",
+    "y",
+    "x"
+  ],
+  "zarr_format": 3,
+  "node_type": "array",
+  "storage_transformers": []
+}

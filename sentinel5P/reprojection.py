@@ -88,7 +88,7 @@ def merge_mean_by_time(datasets):
     return ds_out
 
 
-def reproject_data(path, qa_threshold = 0.5, is_no2 = False):
+def reproject_CO(path, qa_threshold = 0.5, is_no2 = False):
 
     ds = xr.open_dataset(path, engine="netcdf4", group = "PRODUCT")
 
@@ -118,8 +118,8 @@ def reproject_data(path, qa_threshold = 0.5, is_no2 = False):
 
     mask = (
     (ds["latitude"] >= lat_min) & (ds["latitude"] <= lat_max) &
-    (ds["longitude"] >= lon_min) & (ds["longitude"] <= lon_max) & 
-    (ds["qa_value"] >= qa_threshold)
+    (ds["longitude"] >= lon_min) & (ds["longitude"] <= lon_max)
+    #(ds["qa_value"] >= qa_threshold)
     )
 
     if is_no2:

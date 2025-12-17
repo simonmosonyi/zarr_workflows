@@ -1,0 +1,3922 @@
+{
+  "attributes": {
+    "Conventions": "CF-1.7",
+    "freq": "1D",
+    "platform": "S5P",
+    "sensor": "TROPOMI",
+    "spatial_resolution": 10000,
+    "collection": "SENTINEL5P_10000m",
+    "AREA_OR_POINT": "Area",
+    "crs_wkt": "PROJCS[\"WGS84/Equi7Europe\",GEOGCS[\"WGS84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Azimuthal_Equidistant\"],PARAMETER[\"latitude_of_center\",53],PARAMETER[\"longitude_of_center\",24],PARAMETER[\"false_easting\",5837287.82],PARAMETER[\"false_northing\",2121415.696],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"27704\"]]"
+  },
+  "zarr_format": 3,
+  "consolidated_metadata": {
+    "kind": "inline",
+    "must_understand": false,
+    "metadata": {
+      "AER_AI": {
+        "attributes": {
+          "Conventions": "CF-1.7",
+          "title": "TROPOMI/S5P Aerosol Index",
+          "freq": "1D",
+          "platform": "S5P",
+          "sensor": "TROPOMI",
+          "spatial_resolution": 10000,
+          "collection": "SENTINEL5P_10000m",
+          "AREA_OR_POINT": "Area",
+          "institution": "KNMI",
+          "source": "Sentinel 5 precursor, TROPOMI, space-borne remote sensing, L2",
+          "summary": "TROPOMI/S5P Aerosol Index",
+          "references": "https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-5p/products-algorithms; http://www.tropomi.eu/data-products/aerosol-index",
+          "processor_version": "2.6.0",
+          "keywords_vocabulary": "AGU index terms, http://publications.agu.org/author-resource-center/index-terms/",
+          "keywords": "0300 Atmospheric Composition and Structure; 0305 Aerosols and Particles; 0360 Radiation, Transmission and Scattering; 3311 Clouds and Aerosols; 3360 Remote Sensing",
+          "standard_name_vocabulary": "NetCDF Climate and Forecast Metadata Conventions Standard Name Table (v29, 08 July 2015), http://cfconventions.org/standard-names.html",
+          "naming_authority": "nl.knmi",
+          "creator_name": "The Sentinel 5 Precursor TROPOMI Level 2 products are developed with funding from the European Space Agency (ESA), the Netherlands Space Office (NSO), the Belgian Science Policy Office, the German Aerospace Center (DLR), the Bayerisches Staatsministerium f\u00fcr Wirtschaft und Medien, Energie und Technologie (StMWi) and the Earth Observation Data Center (EODC).",
+          "creator_url": "https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-5p",
+          "creator_email": "EOSupport@Copernicus.esa.int",
+          "project": "Sentinel 5 precursor/TROPOMI",
+          "license": "No conditions apply",
+          "cpp_compiler_version": "g++ (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44)",
+          "cpp_compiler_flags": "-g -O2 -fPIC -std=c++11 -W -Wall -Wno-ignored-qualifiers -Wno-write-strings -Wno-unused-variable -Wno-unused-parameter -DTROPNLL2DP",
+          "f90_compiler_version": "GNU Fortran (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44)",
+          "f90_compiler_flags": "-gdwarf-3 -O2 -fPIC -cpp -ffpe-trap=invalid -fno-range-check -frecursive -fimplicit-none -ffree-line-length-none -DTROPNLL2DP -Wuninitialized -Wtabs",
+          "revision_control_identifier": "d084fd110d84",
+          "identifier_product_doi": "10.5270/S5P-3dgz66p",
+          "identifier_product_doi_authority": "http://dx.doi.org/",
+          "interpolation_method": "bilinear",
+          "algorithm_version": "1.4.0",
+          "product_version": "1.5.0",
+          "processing_status": "Nominal",
+          "Status_MET_2D": "Nominal",
+          "crs_wkt": "PROJCS[\"WGS84/Equi7Europe\",GEOGCS[\"WGS84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Azimuthal_Equidistant\"],PARAMETER[\"latitude_of_center\",53],PARAMETER[\"longitude_of_center\",24],PARAMETER[\"false_easting\",5837287.82],PARAMETER[\"false_northing\",2121415.696],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"27704\"]]"
+        },
+        "zarr_format": 3,
+        "consolidated_metadata": {
+          "kind": "inline",
+          "must_understand": false,
+          "metadata": {}
+        },
+        "node_type": "group"
+      },
+      "CO": {
+        "attributes": {
+          "Conventions": "CF-1.7",
+          "title": "TROPOMI/S5P CO Column",
+          "freq": "1D",
+          "platform": "S5P",
+          "sensor": "TROPOMI",
+          "spatial_resolution": 10000,
+          "collection": "SENTINEL5P_10000m",
+          "AREA_OR_POINT": "Area",
+          "institution": "KNMI/SRON",
+          "source": "Sentinel 5 precursor, TROPOMI, space-borne remote sensing, L2",
+          "summary": "TROPOMI/S5P CO Column",
+          "references": "https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-5p/products-algorithms; http://www.tropomi.eu/data-products/carbon-monoxide",
+          "processor_version": "2.6.0",
+          "keywords_vocabulary": "AGU index terms, http://publications.agu.org/author-resource-center/index-terms/",
+          "keywords": "0300 Atmospheric Composition and Structure; 0365 Troposphere, Composition and Chemistry; 1600 Global Change; 1610 Atmosphere",
+          "standard_name_vocabulary": "NetCDF Climate and Forecast Metadata Conventions Standard Name Table (v29, 08 July 2015), http://cfconventions.org/standard-names.html",
+          "naming_authority": "nl.knmi",
+          "creator_name": "The Sentinel 5 Precursor TROPOMI Level 2 products are developed with funding from the European Space Agency (ESA), the Netherlands Space Office (NSO), the Belgian Science Policy Office, the German Aerospace Center (DLR), the Bayerisches Staatsministerium f\u00fcr Wirtschaft und Medien, Energie und Technologie (StMWi) and the Earth Observation Data Center (EODC).",
+          "creator_url": "https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-5p",
+          "creator_email": "EOSupport@Copernicus.esa.int",
+          "project": "Sentinel 5 precursor/TROPOMI",
+          "license": "No conditions apply",
+          "cpp_compiler_version": "g++ (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44)",
+          "cpp_compiler_flags": "-g -O2 -fPIC -std=c++11 -W -Wall -Wno-ignored-qualifiers -Wno-write-strings -Wno-unused-variable -Wno-unused-parameter -DTROPNLL2DP",
+          "f90_compiler_version": "GNU Fortran (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44)",
+          "f90_compiler_flags": "-gdwarf-3 -O2 -fPIC -cpp -ffpe-trap=invalid -fno-range-check -frecursive -fimplicit-none -ffree-line-length-none -DTROPNLL2DP -Wuninitialized -Wtabs",
+          "identifier_product_doi": "10.5270/S5P-bj3nry0",
+          "identifier_product_doi_authority": "http://dx.doi.org/",
+          "interpolation_method": "bilinear",
+          "algorithm_version": "1.5.0",
+          "product_version": "1.5.0",
+          "processing_status": "Nominal",
+          "Status_MET_2D": "Nominal",
+          "Status_CTM_CO": "Nominal",
+          "Status_CTMCH4": "Nominal",
+          "crs_wkt": "PROJCS[\"WGS84/Equi7Europe\",GEOGCS[\"WGS84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Azimuthal_Equidistant\"],PARAMETER[\"latitude_of_center\",53],PARAMETER[\"longitude_of_center\",24],PARAMETER[\"false_easting\",5837287.82],PARAMETER[\"false_northing\",2121415.696],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"27704\"]]"
+        },
+        "zarr_format": 3,
+        "consolidated_metadata": {
+          "kind": "inline",
+          "must_understand": false,
+          "metadata": {}
+        },
+        "node_type": "group"
+      },
+      "HCHO": {
+        "attributes": {
+          "Conventions": "CF-1.7",
+          "title": "TROPOMI/S5P Tropospheric Formaldehyde HCHO",
+          "freq": "1D",
+          "platform": "S5P",
+          "sensor": "TROPOMI",
+          "spatial_resolution": 10000,
+          "collection": "SENTINEL5P_10000m",
+          "AREA_OR_POINT": "Area",
+          "institution": "DLR-IMF",
+          "source": "Sentinel 5 precursor, TROPOMI, space-borne remote sensing, L2",
+          "summary": "TROPOMI/S5P L2 data processed in OFFL mode",
+          "references": "https://atmos.eoc.dlr.de/tropomi",
+          "processor_version": "02.06.01",
+          "keywords_vocabulary": "AGU index terms, http://publications.agu.org/author-resource-center/index-terms/",
+          "keywords": "0315 Biosphere/atmosphere interactions (0426, 1610); 0345 Pollution: Urban and Regional; 0365 Troposphere: Composition and Chemistry; 0368 Troposphere: Constituent Transport and Chemistry; 3360 Remote Sensing; 1631 Land/atmosphere interactions (1218, 1843, 3322); 1632 Land cover change",
+          "standard_name_vocabulary": "NetCDF Climate and Forecast Metadata Conventions Standard Name Table (v29, 08 July 2015), http://cfconventions.org/standard-names.html",
+          "naming_authority": "DLR-IMF",
+          "creator_name": "The Sentinel 5 Precursor TROPOMI Level 2 products are developed with funding from the European Space Agency (ESA), the Netherlands Space Office (NSO), the Belgian Science Policy Office, the German Aerospace Center (DLR), the Bayerisches Staatsministerium f\u00fcr Wirtschaft und Medien, Energie und Technologie (StMWi) and the Earth Observation Data Center (EODC).",
+          "creator_url": "https://atmos.eoc.dlr.de/tropomi ; https://sentinel.esa.int/web/sentinel/missions/sentinel-5p",
+          "creator_email": "EOSupport@Copernicus.esa.int",
+          "project": "Sentinel 5 precursor/TROPOMI",
+          "license": "No conditions apply",
+          "cpp_compiler_version": "/usr/bin/c++ version 7.3.1 20180307 [gcc-7-branch revision 258314] (SUSE Linux)",
+          "cpp_compiler_flags": "-std=gnu++11 -O2 -fopenmp",
+          "f90_compiler_version": "/usr/bin/gfortran version 7.3.1 20180307 [gcc-7-branch revision 258314] (SUSE Linux)",
+          "f90_compiler_flags": "-frecursive -Wno-aggressive-loop-optimizations -O2 -fopenmp",
+          "exe_linker_flags": "-static-libgcc -static-libstdc++ -static-libgfortran",
+          "revision_control_identifier": "b00a2664f80dc489c4d29fdfd946e248b224a036",
+          "identifier_product_doi": "10.5270/S5P-vg1i7t0",
+          "identifier_product_doi_authority": "http://dx.doi.org/",
+          "interpolation_method": "bilinear",
+          "algorithm_version": "UPAS-HCHO-DOAS-5.0.0",
+          "product_version": "2.1",
+          "processing_status": "Nominal",
+          "cloud_mode": "crb",
+          "Status_MET_2D": "Nominal",
+          "Status_NISE__": "Nominal",
+          "Status_CTMFCT_CTMANA": "Nominal",
+          "Status_BG": "Nominal",
+          "Status_AER_AI": "Nominal",
+          "Status_L2__CLOUD_": "External",
+          "Status_reference_spectrum": "nominal_earth",
+          "crs_wkt": "PROJCS[\"WGS84/Equi7Europe\",GEOGCS[\"WGS84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Azimuthal_Equidistant\"],PARAMETER[\"latitude_of_center\",53],PARAMETER[\"longitude_of_center\",24],PARAMETER[\"false_easting\",5837287.82],PARAMETER[\"false_northing\",2121415.696],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"27704\"]]"
+        },
+        "zarr_format": 3,
+        "consolidated_metadata": {
+          "kind": "inline",
+          "must_understand": false,
+          "metadata": {}
+        },
+        "node_type": "group"
+      },
+      "NO2": {
+        "attributes": {
+          "Conventions": "CF-1.7",
+          "title": "TROPOMI/S5P NO2",
+          "freq": "1D",
+          "platform": "S5P",
+          "sensor": "TROPOMI",
+          "spatial_resolution": 10000,
+          "collection": "SENTINEL5P_10000m",
+          "AREA_OR_POINT": "Area",
+          "institution": "KNMI",
+          "source": "Sentinel 5 precursor, TROPOMI, space-borne remote sensing, L2",
+          "summary": "TROPOMI/S5P NO2 1-Orbit L2",
+          "references": "https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-5p/products-algorithms; http://www.tropomi.eu/data-products/nitrogen-dioxide",
+          "processor_version": "2.6.0",
+          "keywords_vocabulary": "AGU index terms, http://publications.agu.org/author-resource-center/index-terms/",
+          "keywords": "0345 Pollution, Urban and Regional; 0365 Troposphere, Composition and Chemistry; 0368 Troposphere, Constituent Transport and Chemistry; 3360 Remote Sensing; 3363 Stratospheric Dynamics",
+          "standard_name_vocabulary": "NetCDF Climate and Forecast Metadata Conventions Standard Name Table (v29, 08 July 2015), http://cfconventions.org/standard-names.html",
+          "naming_authority": "nl.knmi",
+          "creator_name": "The Sentinel 5 Precursor TROPOMI Level 2 products are developed with funding from the European Space Agency (ESA), the Netherlands Space Office (NSO), the Belgian Science Policy Office, the German Aerospace Center (DLR), the Bayerisches Staatsministerium f\u00fcr Wirtschaft und Medien, Energie und Technologie (StMWi) and the Earth Observation Data Center (EODC).",
+          "creator_url": "https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-5p",
+          "creator_email": "EOSupport@Copernicus.esa.int",
+          "project": "Sentinel 5 precursor/TROPOMI",
+          "license": "No conditions apply",
+          "cpp_compiler_version": "g++ (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44)",
+          "cpp_compiler_flags": "-g -O2 -fPIC -std=c++11 -W -Wall -Wno-ignored-qualifiers -Wno-write-strings -Wno-unused-variable -Wno-unused-parameter -DTROPNLL2DP",
+          "f90_compiler_version": "GNU Fortran (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44)",
+          "f90_compiler_flags": "-gdwarf-3 -O2 -fPIC -cpp -ffpe-trap=invalid -fno-range-check -frecursive -fimplicit-none -ffree-line-length-none -DTROPNLL2DP -Wuninitialized -Wtabs",
+          "revision_control_identifier": "d084fd110d84",
+          "identifier_product_doi": "10.5270/S5P-9bnp8q8",
+          "identifier_product_doi_authority": "http://dx.doi.org/",
+          "interpolation_method": "bilinear",
+          "algorithm_version": "1.6.0",
+          "product_version": "2.4.0",
+          "Status_MET_2D": "Nominal",
+          "Status_NISE__": "Retired",
+          "Status_CTMFCT": "Nominal",
+          "history": "2024-07-22 11:49:38 f_s5pops tropnll2dp /mnt/data1/storage_offl_l2/cache_offl_l2/WORKING-613412311/JobOrder.613412267.xml; 2024-07-28 14:59:36 TM5-MP-DOMINO offline v3.6.2",
+          "processing_status": "OFFL-processing nominal product",
+          "date_modified": "2024-07-28T14:59:36Z",
+          "crs_wkt": "PROJCS[\"WGS84/Equi7Europe\",GEOGCS[\"WGS84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Azimuthal_Equidistant\"],PARAMETER[\"latitude_of_center\",53],PARAMETER[\"longitude_of_center\",24],PARAMETER[\"false_easting\",5837287.82],PARAMETER[\"false_northing\",2121415.696],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"27704\"]]"
+        },
+        "zarr_format": 3,
+        "consolidated_metadata": {
+          "kind": "inline",
+          "must_understand": false,
+          "metadata": {}
+        },
+        "node_type": "group"
+      },
+      "SO2": {
+        "attributes": {
+          "Conventions": "CF-1.7",
+          "title": "TROPOMI/S5P Sulphur Dioxide SO2",
+          "freq": "1D",
+          "platform": "S5P",
+          "sensor": "TROPOMI",
+          "spatial_resolution": 10000,
+          "collection": "SENTINEL5P_10000m",
+          "AREA_OR_POINT": "Area",
+          "institution": "DLR-IMF",
+          "source": "Sentinel 5 precursor, TROPOMI, space-borne remote sensing, L2",
+          "summary": "TROPOMI/S5P L2 data processed in OFFL mode",
+          "references": "https://atmos.eoc.dlr.de/tropomi",
+          "processor_version": "02.06.01",
+          "keywords_vocabulary": "AGU index terms, http://publications.agu.org/author-resource-center/index-terms/",
+          "keywords": "0340 Middle atmosphere, composition and chemistry; 0345 Pollution, urban and regional; 0365 Troposphere, composition and chemistry; 3305 Climate change and variability; 3360 Remote sensing; 8419 Volcano monitoring, 8430 Volcanic gases; 8488 Volcanic hazards and risks",
+          "standard_name_vocabulary": "NetCDF Climate and Forecast Metadata Conventions Standard Name Table (v29, 08 July 2015), http://cfconventions.org/standard-names.html",
+          "naming_authority": "DLR-IMF",
+          "creator_name": "The Sentinel 5 Precursor TROPOMI Level 2 products are developed with funding from the European Space Agency (ESA), the Netherlands Space Office (NSO), the Belgian Science Policy Office, the German Aerospace Center (DLR), the Bayerisches Staatsministerium f\u00fcr Wirtschaft und Medien, Energie und Technologie (StMWi) and the Earth Observation Data Center (EODC).",
+          "creator_url": "https://atmos.eoc.dlr.de/tropomi ; https://sentinel.esa.int/web/sentinel/missions/sentinel-5p",
+          "creator_email": "EOSupport@Copernicus.esa.int",
+          "project": "Sentinel 5 precursor/TROPOMI",
+          "license": "No conditions apply",
+          "cpp_compiler_version": "/usr/bin/c++ version 7.3.1 20180307 [gcc-7-branch revision 258314] (SUSE Linux)",
+          "cpp_compiler_flags": "-std=gnu++11 -O2 -fopenmp",
+          "f90_compiler_version": "/usr/bin/gfortran version 7.3.1 20180307 [gcc-7-branch revision 258314] (SUSE Linux)",
+          "f90_compiler_flags": "-frecursive -Wno-aggressive-loop-optimizations -O2 -fopenmp",
+          "exe_linker_flags": "-static-libgcc -static-libstdc++ -static-libgfortran",
+          "revision_control_identifier": "b00a2664f80dc489c4d29fdfd946e248b224a036",
+          "identifier_product_doi": "10.5270/S5P-74eidii",
+          "identifier_product_doi_authority": "http://dx.doi.org/",
+          "interpolation_method": "bilinear",
+          "algorithm_version": "UPAS-SO2-DOAS-5.0.0",
+          "product_version": "2.1",
+          "processing_status": "Nominal",
+          "cloud_mode": "crb",
+          "Status_MET_2D": "Nominal",
+          "Status_NISE__": "Nominal",
+          "Status_CTMFCT_CTMANA": "Nominal",
+          "Status_BG": "Nominal",
+          "Status_AER_AI": "Nominal",
+          "Status_L2__CLOUD_": "External",
+          "Status_reference_spectrum": "nominal_earth",
+          "Status_L2__O3____": "External",
+          "crs_wkt": "PROJCS[\"WGS84/Equi7Europe\",GEOGCS[\"WGS84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Azimuthal_Equidistant\"],PARAMETER[\"latitude_of_center\",53],PARAMETER[\"longitude_of_center\",24],PARAMETER[\"false_easting\",5837287.82],PARAMETER[\"false_northing\",2121415.696],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"27704\"]]"
+        },
+        "zarr_format": 3,
+        "consolidated_metadata": {
+          "kind": "inline",
+          "must_understand": false,
+          "metadata": {}
+        },
+        "node_type": "group"
+      },
+      "AER_AI/aerosol_index_335_367": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int16",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -9999,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 2,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "shuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -9999,
+          "scale_factor": 0.001,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref",
+          "units": "1",
+          "proposed_standard_name": "ultraviolet_aerosol_index",
+          "comment": "Aerosol index from 335 and 367 nm",
+          "long_name": "Aerosol index from 335 and 367 nm",
+          "radiation_wavelength": "array([335., 367.], dtype=float32)",
+          "ancillary_variables": "aerosol_index_335_367_precision"
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "AER_AI/aerosol_index_335_367_precision": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int16",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -9999,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 2,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "shuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -9999,
+          "scale_factor": 0.001,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref",
+          "units": "1",
+          "proposed_standard_name": "ultraviolet_aerosol_index standard_error",
+          "comment": "Precision of aerosol index from 335 and 367 nm",
+          "long_name": "Precision of aerosol index from 335 and 367 nm",
+          "radiation_wavelength": "array([335., 367.], dtype=float32)"
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "AER_AI/aerosol_index_340_380": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int16",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -9999,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 2,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "shuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -9999,
+          "scale_factor": 0.001,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref",
+          "units": "1",
+          "proposed_standard_name": "ultraviolet_aerosol_index",
+          "comment": "Aerosol index from 340 and 380 nm",
+          "long_name": "Aerosol index from 340 and 380 nm",
+          "radiation_wavelength": "array([340., 380.], dtype=float32)",
+          "ancillary_variables": "aerosol_index_340_380_precision"
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "AER_AI/aerosol_index_340_380_precision": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int16",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -9999,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 2,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "shuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -9999,
+          "scale_factor": 0.001,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref",
+          "units": "1",
+          "proposed_standard_name": "ultraviolet_aerosol_index standard_error",
+          "comment": "Precision of aerosol index from 340 and 380 nm",
+          "long_name": "Precision of aerosol index from 340 and 380 nm",
+          "radiation_wavelength": "array([340., 380.], dtype=float32)"
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "AER_AI/aerosol_index_354_388": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int16",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -9999,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 2,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "shuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -9999,
+          "scale_factor": 0.001,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref",
+          "units": "1",
+          "proposed_standard_name": "ultraviolet_aerosol_index",
+          "comment": "Aerosol index from 354 and 388 nm",
+          "long_name": "Aerosol index from 354 and 388 nm",
+          "radiation_wavelength": "array([354., 388.], dtype=float32)",
+          "ancillary_variables": "aerosol_index_354_388_precision"
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "AER_AI/aerosol_index_354_388_precision": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int16",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -9999,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 2,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "shuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -9999,
+          "scale_factor": 0.001,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref",
+          "units": "1",
+          "proposed_standard_name": "ultraviolet_aerosol_index standard_error",
+          "comment": "Precision of aerosol index from 354 and 388 nm",
+          "long_name": "Precision of aerosol index from 354 and 388 nm",
+          "radiation_wavelength": "array([354., 388.], dtype=float32)"
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "AER_AI/qa_value": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int8",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -99,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes"
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 1,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "bitshuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -99,
+          "scale_factor": 0.1,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref"
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "AER_AI/spatial_ref": {
+        "shape": [
+          1
+        ],
+        "data_type": "int8",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              1
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                1
+              ],
+              "codecs": [
+                {
+                  "name": "bytes"
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 1,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "bitshuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "crs_wkt": "PROJCS[\"WGS 84 / Equi7 Europe\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Azimuthal_Equidistant\"],PARAMETER[\"latitude_of_center\",53],PARAMETER[\"longitude_of_center\",24],PARAMETER[\"false_easting\",5837287.82],PARAMETER[\"false_northing\",2121415.696],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"27704\"]]",
+          "semi_major_axis": 6378137.0,
+          "semi_minor_axis": 6356752.314245179,
+          "inverse_flattening": 298.257223563,
+          "reference_ellipsoid_name": "WGS 84",
+          "longitude_of_prime_meridian": 0.0,
+          "prime_meridian_name": "Greenwich",
+          "geographic_crs_name": "WGS 84",
+          "horizontal_datum_name": "World Geodetic System 1984",
+          "projected_crs_name": "WGS 84 / Equi7 Europe",
+          "grid_mapping_name": "azimuthal_equidistant",
+          "latitude_of_projection_origin": 53.0,
+          "longitude_of_projection_origin": 24.0,
+          "false_easting": 5837287.82,
+          "false_northing": 2121415.696,
+          "spatial_ref": "PROJCS[\"WGS 84 / Equi7 Europe\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Azimuthal_Equidistant\"],PARAMETER[\"latitude_of_center\",53],PARAMETER[\"longitude_of_center\",24],PARAMETER[\"false_easting\",5837287.82],PARAMETER[\"false_northing\",2121415.696],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"27704\"]]"
+        },
+        "dimension_names": [
+          "spatial_ref"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "AER_AI/time": {
+        "shape": [
+          2690
+        ],
+        "data_type": "int64",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              2690
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0,
+        "codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "zstd",
+            "configuration": {
+              "level": 0,
+              "checksum": false
+            }
+          }
+        ],
+        "attributes": {
+          "units": "days since 2018-04-01",
+          "calendar": "proleptic_gregorian",
+          "long_name": "date of acquisition",
+          "standard_name": "time",
+          "_ARRAY_DIMENSIONS": [
+            "time"
+          ]
+        },
+        "dimension_names": [
+          "time"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "AER_AI/x": {
+        "shape": [
+          90
+        ],
+        "data_type": "float64",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0.0,
+        "codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "zstd",
+            "configuration": {
+              "level": 0,
+              "checksum": false
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": "AAAAAAAA+H8=",
+          "axis": "X",
+          "long_name": "x coordinate of projection",
+          "standard_name": "projection_x_coordinate",
+          "units": "m",
+          "_ARRAY_DIMENSIONS": [
+            "x"
+          ]
+        },
+        "dimension_names": [
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "AER_AI/y": {
+        "shape": [
+          60
+        ],
+        "data_type": "float64",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              60
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0.0,
+        "codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "zstd",
+            "configuration": {
+              "level": 0,
+              "checksum": false
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": "AAAAAAAA+H8=",
+          "axis": "Y",
+          "long_name": "y coordinate of projection",
+          "standard_name": "projection_y_coordinate",
+          "units": "m",
+          "_ARRAY_DIMENSIONS": [
+            "y"
+          ]
+        },
+        "dimension_names": [
+          "y"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "CO/carbonmonoxide_total_column": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int16",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -9999,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 2,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "shuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -9999,
+          "scale_factor": 0.0001,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref",
+          "units": "mol m-2",
+          "standard_name": "atmosphere_mole_content_of_carbon_monoxide",
+          "long_name": "Vertically integrated CO column",
+          "ancillary_variables": "carbonmonoxide_total_column_precision",
+          "multiplication_factor_to_convert_to_molecules_percm2": 6.022140853952394e+19
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "CO/carbonmonoxide_total_column_corrected": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int16",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -9999,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 2,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "shuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -9999,
+          "scale_factor": 0.0001,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref",
+          "units": "mol m-2",
+          "standard_name": "atmosphere_mole_content_of_carbon_monoxide",
+          "long_name": "carbonmonoxide_total_column - carbonmonoxide_total_column_stripe_offset",
+          "ancillary_variables": "carbonmonoxide_total_column_precision carbonmonoxide_total_column_stripe_offset",
+          "multiplication_factor_to_convert_to_molecules_percm2": 6.022140853952394e+19
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "CO/carbonmonoxide_total_column_precision": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int16",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -9999,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 2,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "shuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -9999,
+          "scale_factor": 0.0001,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref",
+          "units": "mol m-2",
+          "standard_name": "atmosphere_mole_content_of_carbon_monoxide standard_error",
+          "long_name": "Standard error of the vertically integrated CO column",
+          "multiplication_factor_to_convert_to_molecules_percm2": 6.022140853952394e+19
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "CO/qa_value": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int8",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -99,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes"
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 1,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "bitshuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -99,
+          "scale_factor": 0.1,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref"
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "CO/spatial_ref": {
+        "shape": [
+          1
+        ],
+        "data_type": "int8",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              1
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                1
+              ],
+              "codecs": [
+                {
+                  "name": "bytes"
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 1,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "bitshuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "crs_wkt": "PROJCS[\"WGS 84 / Equi7 Europe\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Azimuthal_Equidistant\"],PARAMETER[\"latitude_of_center\",53],PARAMETER[\"longitude_of_center\",24],PARAMETER[\"false_easting\",5837287.82],PARAMETER[\"false_northing\",2121415.696],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"27704\"]]",
+          "semi_major_axis": 6378137.0,
+          "semi_minor_axis": 6356752.314245179,
+          "inverse_flattening": 298.257223563,
+          "reference_ellipsoid_name": "WGS 84",
+          "longitude_of_prime_meridian": 0.0,
+          "prime_meridian_name": "Greenwich",
+          "geographic_crs_name": "WGS 84",
+          "horizontal_datum_name": "World Geodetic System 1984",
+          "projected_crs_name": "WGS 84 / Equi7 Europe",
+          "grid_mapping_name": "azimuthal_equidistant",
+          "latitude_of_projection_origin": 53.0,
+          "longitude_of_projection_origin": 24.0,
+          "false_easting": 5837287.82,
+          "false_northing": 2121415.696,
+          "spatial_ref": "PROJCS[\"WGS 84 / Equi7 Europe\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Azimuthal_Equidistant\"],PARAMETER[\"latitude_of_center\",53],PARAMETER[\"longitude_of_center\",24],PARAMETER[\"false_easting\",5837287.82],PARAMETER[\"false_northing\",2121415.696],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"27704\"]]"
+        },
+        "dimension_names": [
+          "spatial_ref"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "CO/time": {
+        "shape": [
+          2690
+        ],
+        "data_type": "int64",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              2690
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0,
+        "codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "zstd",
+            "configuration": {
+              "level": 0,
+              "checksum": false
+            }
+          }
+        ],
+        "attributes": {
+          "units": "days since 2018-04-01",
+          "calendar": "proleptic_gregorian",
+          "long_name": "date of acquisition",
+          "standard_name": "time",
+          "_ARRAY_DIMENSIONS": [
+            "time"
+          ]
+        },
+        "dimension_names": [
+          "time"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "CO/x": {
+        "shape": [
+          90
+        ],
+        "data_type": "float64",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0.0,
+        "codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "zstd",
+            "configuration": {
+              "level": 0,
+              "checksum": false
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": "AAAAAAAA+H8=",
+          "axis": "X",
+          "long_name": "x coordinate of projection",
+          "standard_name": "projection_x_coordinate",
+          "units": "m",
+          "_ARRAY_DIMENSIONS": [
+            "x"
+          ]
+        },
+        "dimension_names": [
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "CO/y": {
+        "shape": [
+          60
+        ],
+        "data_type": "float64",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              60
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0.0,
+        "codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "zstd",
+            "configuration": {
+              "level": 0,
+              "checksum": false
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": "AAAAAAAA+H8=",
+          "axis": "Y",
+          "long_name": "y coordinate of projection",
+          "standard_name": "projection_y_coordinate",
+          "units": "m",
+          "_ARRAY_DIMENSIONS": [
+            "y"
+          ]
+        },
+        "dimension_names": [
+          "y"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "HCHO/formaldehyde_tropospheric_vertical_column": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int16",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -9999,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 2,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "shuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -9999,
+          "scale_factor": 1e-06,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref",
+          "units": "mol m-2",
+          "standard_name": "troposphere_mole_content_of_formaldehyde",
+          "long_name": "vertical column of formaldehyde",
+          "multiplication_factor_to_convert_to_DU": 2241.14990234375,
+          "multiplication_factor_to_convert_to_molecules_percm2": 6.022139974343092e+19
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "HCHO/formaldehyde_tropospheric_vertical_column_precision": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int16",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -9999,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 2,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "shuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -9999,
+          "scale_factor": 1e-06,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref",
+          "units": "mol m-2",
+          "standard_name": "troposphere_mole_content_of formaldehyde standard_error",
+          "long_name": "random error of vertical column density",
+          "multiplication_factor_to_convert_to_DU": 2241.14990234375,
+          "multiplication_factor_to_convert_to_molecules_percm2": 6.022139974343092e+19
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "HCHO/qa_value": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int8",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -99,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes"
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 1,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "bitshuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -99,
+          "scale_factor": 0.1,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref"
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "HCHO/spatial_ref": {
+        "shape": [
+          1
+        ],
+        "data_type": "int8",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              1
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                1
+              ],
+              "codecs": [
+                {
+                  "name": "bytes"
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 1,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "bitshuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "crs_wkt": "PROJCS[\"WGS 84 / Equi7 Europe\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Azimuthal_Equidistant\"],PARAMETER[\"latitude_of_center\",53],PARAMETER[\"longitude_of_center\",24],PARAMETER[\"false_easting\",5837287.82],PARAMETER[\"false_northing\",2121415.696],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"27704\"]]",
+          "semi_major_axis": 6378137.0,
+          "semi_minor_axis": 6356752.314245179,
+          "inverse_flattening": 298.257223563,
+          "reference_ellipsoid_name": "WGS 84",
+          "longitude_of_prime_meridian": 0.0,
+          "prime_meridian_name": "Greenwich",
+          "geographic_crs_name": "WGS 84",
+          "horizontal_datum_name": "World Geodetic System 1984",
+          "projected_crs_name": "WGS 84 / Equi7 Europe",
+          "grid_mapping_name": "azimuthal_equidistant",
+          "latitude_of_projection_origin": 53.0,
+          "longitude_of_projection_origin": 24.0,
+          "false_easting": 5837287.82,
+          "false_northing": 2121415.696,
+          "spatial_ref": "PROJCS[\"WGS 84 / Equi7 Europe\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Azimuthal_Equidistant\"],PARAMETER[\"latitude_of_center\",53],PARAMETER[\"longitude_of_center\",24],PARAMETER[\"false_easting\",5837287.82],PARAMETER[\"false_northing\",2121415.696],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"27704\"]]"
+        },
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "HCHO/time": {
+        "shape": [
+          2690
+        ],
+        "data_type": "int64",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              2690
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0,
+        "codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "zstd",
+            "configuration": {
+              "level": 0,
+              "checksum": false
+            }
+          }
+        ],
+        "attributes": {
+          "units": "days since 2018-04-01",
+          "calendar": "proleptic_gregorian",
+          "long_name": "date of acquisition",
+          "standard_name": "time",
+          "_ARRAY_DIMENSIONS": [
+            "time"
+          ]
+        },
+        "dimension_names": [
+          "time"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "HCHO/x": {
+        "shape": [
+          90
+        ],
+        "data_type": "float64",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0.0,
+        "codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "zstd",
+            "configuration": {
+              "level": 0,
+              "checksum": false
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": "AAAAAAAA+H8=",
+          "axis": "X",
+          "long_name": "x coordinate of projection",
+          "standard_name": "projection_x_coordinate",
+          "units": "m",
+          "_ARRAY_DIMENSIONS": [
+            "x"
+          ]
+        },
+        "dimension_names": [
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "HCHO/y": {
+        "shape": [
+          60
+        ],
+        "data_type": "float64",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              60
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0.0,
+        "codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "zstd",
+            "configuration": {
+              "level": 0,
+              "checksum": false
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": "AAAAAAAA+H8=",
+          "axis": "Y",
+          "long_name": "y coordinate of projection",
+          "standard_name": "projection_y_coordinate",
+          "units": "m",
+          "_ARRAY_DIMENSIONS": [
+            "y"
+          ]
+        },
+        "dimension_names": [
+          "y"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "NO2/air_mass_factor_total": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int16",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -9999,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 2,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "shuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -9999,
+          "scale_factor": 0.01,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref",
+          "units": "1",
+          "long_name": "Total air mass factor"
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "NO2/air_mass_factor_troposphere": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int16",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -9999,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 2,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "shuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -9999,
+          "scale_factor": 0.01,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref",
+          "units": "1",
+          "long_name": "Tropospheric air mass factor",
+          "ancillary_variables": "tm5_tropopause_layer_index"
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "NO2/averaging_kernel": {
+        "shape": [
+          2690,
+          60,
+          90,
+          34
+        ],
+        "data_type": "int16",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90,
+              34
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -9999,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90,
+                34
+              ],
+              "codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 2,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "shuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -9999,
+          "scale_factor": 0.0001,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref",
+          "units": "1",
+          "long_name": "Averaging kernel",
+          "ancillary_variables": "tm5_constant_a tm5_constant_b tm5_tropopause_layer_index /PRODUCT/SUPPORT_DATA/INPUT_DATA/surface_pressure"
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x",
+          "layer"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "NO2/layer": {
+        "shape": [
+          34
+        ],
+        "data_type": "float32",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              34
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0.0,
+        "codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "zstd",
+            "configuration": {
+              "level": 0,
+              "checksum": false
+            }
+          }
+        ],
+        "attributes": {
+          "axis": "layer",
+          "long_name": "y coordinate of projection",
+          "standard_name": "projection_y_coordinate",
+          "units": "m",
+          "_ARRAY_DIMENSIONS": [
+            "layer"
+          ]
+        },
+        "dimension_names": [
+          "layer"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "NO2/nitrogendioxide_tropospheric_column": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int16",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -9999,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 2,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "shuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -9999,
+          "scale_factor": 1e-07,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref",
+          "units": "mol m-2",
+          "standard_name": "troposphere_mole_content_of_nitrogen_dioxide",
+          "long_name": "Tropospheric vertical column of nitrogen dioxide",
+          "ancillary_variables": "nitrogendioxide_tropospheric_column_precision air_mass_factor_troposphere air_mass_factor_total averaging_kernel",
+          "multiplication_factor_to_convert_to_molecules_percm2": 6.022139974343092e+19
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "NO2/nitrogendioxide_tropospheric_column_precision": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int16",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -9999,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 2,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "shuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -9999,
+          "scale_factor": 1e-07,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref",
+          "units": "mol m-2",
+          "standard_name": "troposphere_mole_content_of_nitrogen_dioxide standard_error",
+          "long_name": "Precision of the tropospheric vertical column of nitrogen dioxide",
+          "multiplication_factor_to_convert_to_molecules_percm2": 6.022140853952394e+19
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "NO2/nitrogendioxide_tropospheric_column_precision_kernel": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int16",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -9999,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 2,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "shuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -9999,
+          "scale_factor": 1e-07,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref",
+          "units": "mol m-2",
+          "standard_name": "troposphere_mole_content_of_nitrogen_dioxide standard_error",
+          "long_name": "Precision of the tropospheric vertical column of nitrogen dioxide when applying the averaging kernel",
+          "multiplication_factor_to_convert_to_molecules_percm2": 6.022140853952394e+19
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "NO2/qa_value": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int8",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -99,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes"
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 1,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "bitshuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -99,
+          "scale_factor": 0.1,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref"
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "NO2/spatial_ref": {
+        "shape": [
+          1
+        ],
+        "data_type": "int8",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              1
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                1
+              ],
+              "codecs": [
+                {
+                  "name": "bytes"
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 1,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "bitshuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "crs_wkt": "PROJCS[\"WGS 84 / Equi7 Europe\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Azimuthal_Equidistant\"],PARAMETER[\"latitude_of_center\",53],PARAMETER[\"longitude_of_center\",24],PARAMETER[\"false_easting\",5837287.82],PARAMETER[\"false_northing\",2121415.696],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"27704\"]]",
+          "semi_major_axis": 6378137.0,
+          "semi_minor_axis": 6356752.314245179,
+          "inverse_flattening": 298.257223563,
+          "reference_ellipsoid_name": "WGS 84",
+          "longitude_of_prime_meridian": 0.0,
+          "prime_meridian_name": "Greenwich",
+          "geographic_crs_name": "WGS 84",
+          "horizontal_datum_name": "World Geodetic System 1984",
+          "projected_crs_name": "WGS 84 / Equi7 Europe",
+          "grid_mapping_name": "azimuthal_equidistant",
+          "latitude_of_projection_origin": 53.0,
+          "longitude_of_projection_origin": 24.0,
+          "false_easting": 5837287.82,
+          "false_northing": 2121415.696,
+          "spatial_ref": "PROJCS[\"WGS 84 / Equi7 Europe\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Azimuthal_Equidistant\"],PARAMETER[\"latitude_of_center\",53],PARAMETER[\"longitude_of_center\",24],PARAMETER[\"false_easting\",5837287.82],PARAMETER[\"false_northing\",2121415.696],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"27704\"]]"
+        },
+        "dimension_names": [
+          "spatial_ref"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "NO2/time": {
+        "shape": [
+          2690
+        ],
+        "data_type": "int64",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              2690
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0,
+        "codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "zstd",
+            "configuration": {
+              "level": 0,
+              "checksum": false
+            }
+          }
+        ],
+        "attributes": {
+          "units": "days since 2018-04-01",
+          "calendar": "proleptic_gregorian",
+          "long_name": "date of acquisition",
+          "standard_name": "time",
+          "_ARRAY_DIMENSIONS": [
+            "time"
+          ]
+        },
+        "dimension_names": [
+          "time"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "NO2/tm5_constant_a": {
+        "shape": [
+          34,
+          2
+        ],
+        "data_type": "int16",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              34,
+              2
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -9999,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                34,
+                2
+              ],
+              "codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 2,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "shuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -9999,
+          "scale_factor": 0.1,
+          "_ARRAY_DIMENSIONS": [
+            "layer",
+            "vertices"
+          ],
+          "grid_mapping": "spatial_ref",
+          "units": "Pa",
+          "long_name": "TM5 hybrid A coefficient at upper and lower interface levels"
+        },
+        "dimension_names": [
+          "layer",
+          "vertices"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "NO2/tm5_constant_b": {
+        "shape": [
+          34,
+          2
+        ],
+        "data_type": "int16",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              34,
+              2
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -9999,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                34,
+                2
+              ],
+              "codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 2,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "shuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -9999,
+          "scale_factor": 0.1,
+          "_ARRAY_DIMENSIONS": [
+            "layer",
+            "vertices"
+          ],
+          "grid_mapping": "spatial_ref",
+          "units": "1",
+          "long_name": "TM5 hybrid B coefficient at upper and lower interface levels"
+        },
+        "dimension_names": [
+          "layer",
+          "vertices"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "NO2/tm5_tropopause_layer_index": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int8",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -99,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes"
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 1,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "bitshuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -99,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref",
+          "units": "1",
+          "long_name": "TM5 layer index of the highest layer in the tropopause",
+          "ancillary_variables": "tm5_constant_a tm5_constant_b /PRODUCT/SUPPORT_DATA/INPUT_DATA/surface_pressure"
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "NO2/vertices": {
+        "shape": [
+          2
+        ],
+        "data_type": "float32",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              2
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0.0,
+        "codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "zstd",
+            "configuration": {
+              "level": 0,
+              "checksum": false
+            }
+          }
+        ],
+        "attributes": {
+          "axis": "vertices",
+          "long_name": "y coordinate of projection",
+          "standard_name": "projection_y_coordinate",
+          "units": "m",
+          "_ARRAY_DIMENSIONS": [
+            "vertices"
+          ]
+        },
+        "dimension_names": [
+          "vertices"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "NO2/x": {
+        "shape": [
+          90
+        ],
+        "data_type": "float64",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0.0,
+        "codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "zstd",
+            "configuration": {
+              "level": 0,
+              "checksum": false
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": "AAAAAAAA+H8=",
+          "axis": "X",
+          "long_name": "x coordinate of projection",
+          "standard_name": "projection_x_coordinate",
+          "units": "m",
+          "_ARRAY_DIMENSIONS": [
+            "x"
+          ]
+        },
+        "dimension_names": [
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "NO2/y": {
+        "shape": [
+          60
+        ],
+        "data_type": "float64",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              60
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0.0,
+        "codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "zstd",
+            "configuration": {
+              "level": 0,
+              "checksum": false
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": "AAAAAAAA+H8=",
+          "axis": "Y",
+          "long_name": "y coordinate of projection",
+          "standard_name": "projection_y_coordinate",
+          "units": "m",
+          "_ARRAY_DIMENSIONS": [
+            "y"
+          ]
+        },
+        "dimension_names": [
+          "y"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "SO2/qa_value": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int8",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -99,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes"
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 1,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "bitshuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -99,
+          "scale_factor": 0.1,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref"
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "SO2/spatial_ref": {
+        "shape": [
+          1
+        ],
+        "data_type": "int8",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              1
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                1
+              ],
+              "codecs": [
+                {
+                  "name": "bytes"
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 1,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "bitshuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "crs_wkt": "PROJCS[\"WGS 84 / Equi7 Europe\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Azimuthal_Equidistant\"],PARAMETER[\"latitude_of_center\",53],PARAMETER[\"longitude_of_center\",24],PARAMETER[\"false_easting\",5837287.82],PARAMETER[\"false_northing\",2121415.696],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"27704\"]]",
+          "semi_major_axis": 6378137.0,
+          "semi_minor_axis": 6356752.314245179,
+          "inverse_flattening": 298.257223563,
+          "reference_ellipsoid_name": "WGS 84",
+          "longitude_of_prime_meridian": 0.0,
+          "prime_meridian_name": "Greenwich",
+          "geographic_crs_name": "WGS 84",
+          "horizontal_datum_name": "World Geodetic System 1984",
+          "projected_crs_name": "WGS 84 / Equi7 Europe",
+          "grid_mapping_name": "azimuthal_equidistant",
+          "latitude_of_projection_origin": 53.0,
+          "longitude_of_projection_origin": 24.0,
+          "false_easting": 5837287.82,
+          "false_northing": 2121415.696,
+          "spatial_ref": "PROJCS[\"WGS 84 / Equi7 Europe\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Azimuthal_Equidistant\"],PARAMETER[\"latitude_of_center\",53],PARAMETER[\"longitude_of_center\",24],PARAMETER[\"false_easting\",5837287.82],PARAMETER[\"false_northing\",2121415.696],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"27704\"]]"
+        },
+        "dimension_names": [
+          "spatial_ref"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "SO2/sulfurdioxide_total_vertical_column": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int16",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -9999,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 2,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "shuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -9999,
+          "scale_factor": 1e-06,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref",
+          "units": "mol m-2",
+          "standard_name": "atmosphere_mole_content_of_sulfur_dioxide",
+          "long_name": "total vertical column of sulfur dioxide for the polluted scenario derived from the total slant column",
+          "ancillary_variables": "sulfurdioxide_total_vertical_column_precision /PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/sulfurdioxide_total_vertical_column_trueness",
+          "multiplication_factor_to_convert_to_DU": 2241.14990234375,
+          "multiplication_factor_to_convert_to_molecules_percm2": 6.022139974343092e+19
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "SO2/sulfurdioxide_total_vertical_column_precision": {
+        "shape": [
+          2690,
+          60,
+          90
+        ],
+        "data_type": "int16",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              30,
+              60,
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -9999,
+        "codecs": [
+          {
+            "name": "sharding_indexed",
+            "configuration": {
+              "chunk_shape": [
+                30,
+                60,
+                90
+              ],
+              "codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "blosc",
+                  "configuration": {
+                    "typesize": 2,
+                    "cname": "zstd",
+                    "clevel": 5,
+                    "shuffle": "shuffle",
+                    "blocksize": 0
+                  }
+                }
+              ],
+              "index_codecs": [
+                {
+                  "name": "bytes",
+                  "configuration": {
+                    "endian": "little"
+                  }
+                },
+                {
+                  "name": "crc32c"
+                }
+              ],
+              "index_location": "end"
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": -9999,
+          "scale_factor": 1e-06,
+          "_ARRAY_DIMENSIONS": [
+            "time",
+            "y",
+            "x"
+          ],
+          "grid_mapping": "spatial_ref",
+          "units": "mol m-2",
+          "standard_name": "atmosphere_mole_content_of_sulfur_dioxide_standard_error",
+          "long_name": "precision of the total vertical column of sulfur dioxide for the polluted scenario derived from the total slant column",
+          "multiplication_factor_to_convert_to_DU": 2241.14990234375,
+          "multiplication_factor_to_convert_to_molecules_percm2": 6.022139974343092e+19
+        },
+        "dimension_names": [
+          "time",
+          "y",
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "SO2/time": {
+        "shape": [
+          2690
+        ],
+        "data_type": "int64",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              2690
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0,
+        "codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "zstd",
+            "configuration": {
+              "level": 0,
+              "checksum": false
+            }
+          }
+        ],
+        "attributes": {
+          "units": "days since 2018-04-01",
+          "calendar": "proleptic_gregorian",
+          "long_name": "date of acquisition",
+          "standard_name": "time",
+          "_ARRAY_DIMENSIONS": [
+            "time"
+          ]
+        },
+        "dimension_names": [
+          "time"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "SO2/x": {
+        "shape": [
+          90
+        ],
+        "data_type": "float64",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              90
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0.0,
+        "codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "zstd",
+            "configuration": {
+              "level": 0,
+              "checksum": false
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": "AAAAAAAA+H8=",
+          "axis": "X",
+          "long_name": "x coordinate of projection",
+          "standard_name": "projection_x_coordinate",
+          "units": "m",
+          "_ARRAY_DIMENSIONS": [
+            "x"
+          ]
+        },
+        "dimension_names": [
+          "x"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "SO2/y": {
+        "shape": [
+          60
+        ],
+        "data_type": "float64",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              60
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0.0,
+        "codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "zstd",
+            "configuration": {
+              "level": 0,
+              "checksum": false
+            }
+          }
+        ],
+        "attributes": {
+          "_FillValue": "AAAAAAAA+H8=",
+          "axis": "Y",
+          "long_name": "y coordinate of projection",
+          "standard_name": "projection_y_coordinate",
+          "units": "m",
+          "_ARRAY_DIMENSIONS": [
+            "y"
+          ]
+        },
+        "dimension_names": [
+          "y"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      }
+    }
+  },
+  "node_type": "group"
+}

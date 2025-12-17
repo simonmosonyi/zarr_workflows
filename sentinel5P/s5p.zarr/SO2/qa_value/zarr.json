@@ -1,0 +1,82 @@
+{
+  "shape": [
+    2690,
+    60,
+    90
+  ],
+  "data_type": "int8",
+  "chunk_grid": {
+    "name": "regular",
+    "configuration": {
+      "chunk_shape": [
+        30,
+        60,
+        90
+      ]
+    }
+  },
+  "chunk_key_encoding": {
+    "name": "default",
+    "configuration": {
+      "separator": "/"
+    }
+  },
+  "fill_value": -99,
+  "codecs": [
+    {
+      "name": "sharding_indexed",
+      "configuration": {
+        "chunk_shape": [
+          30,
+          60,
+          90
+        ],
+        "codecs": [
+          {
+            "name": "bytes"
+          },
+          {
+            "name": "blosc",
+            "configuration": {
+              "typesize": 1,
+              "cname": "zstd",
+              "clevel": 5,
+              "shuffle": "bitshuffle",
+              "blocksize": 0
+            }
+          }
+        ],
+        "index_codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "crc32c"
+          }
+        ],
+        "index_location": "end"
+      }
+    }
+  ],
+  "attributes": {
+    "_FillValue": -99,
+    "scale_factor": 0.1,
+    "_ARRAY_DIMENSIONS": [
+      "time",
+      "y",
+      "x"
+    ],
+    "grid_mapping": "spatial_ref"
+  },
+  "dimension_names": [
+    "time",
+    "y",
+    "x"
+  ],
+  "zarr_format": 3,
+  "node_type": "array",
+  "storage_transformers": []
+}
