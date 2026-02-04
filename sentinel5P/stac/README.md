@@ -6,7 +6,7 @@
 -  **Bands = variables inside that group**  
 -  **`cube:variables` describes structure**  
 -  **`raster:bands.name` = array names**
--  (one link for zarr store not supported by api at the moment)
+-  one link for zarr store: **media_type="application/octet-stream"** because **"application/octet-stream"** not supported
 -  Extensions:
 	- Datacube extension
 	- Projection Extension
