@@ -1,0 +1,161 @@
+apiVersion: argoproj.io/v1alpha1
+kind: CronWorkflow
+metadata:
+  generateName: spartacus-yearly-
+  namespace: spartacus
+spec:
+  schedule: 0 6 1 6 *
+  workflowSpec:
+    entrypoint: workflow
+    templates:
+    - name: pipeline
+      dag:
+        tasks:
+        - name: spartacus-download
+          template: spartacus-download
+          arguments:
+            parameters:
+            - name: variable
+              value: '{{inputs.parameters.args}}'
+        - name: spartacus-write
+          depends: spartacus-download
+          template: spartacus-write
+          arguments:
+            artifacts:
+            - name: spartacus-file
+              from: '{{tasks.spartacus-download.outputs.artifacts.spartacus-file}}'
+            parameters:
+            - name: variable
+              value: '{{inputs.parameters.args}}'
+      inputs:
+        parameters:
+        - name: args
+    - name: spartacus-download
+      inputs:
+        parameters:
+        - name: variable
+      outputs:
+        artifacts:
+        - name: spartacus-file
+          path: /tmp/output.nc
+          archive:
+            none: {}
+      script:
+        image: ghcr.io/oscipal/image_zarr:latest
+        source: |-
+          import os
+          import sys
+          sys.path.append(os.getcwd())
+          import json
+          try: variable = json.loads(r'''{{inputs.parameters.variable}}''')
+          except: variable = r'''{{inputs.parameters.variable}}'''
+
+          from urllib.request import urlretrieve
+          import datetime
+          today = datetime.date.today() - datetime.timedelta(months=10)
+          year = today.strftime('%Y')
+          url = f'https://public.hub.geosphere.at/datahub/resources/spartacus-v2-1d-1km/filelisting/{variable}/SPARTACUS2-DAILY_{variable}_{year}.nc'
+          urlretrieve(url, '/tmp/output.nc')
+        command:
+        - python
+    - name: spartacus-write
+      inputs:
+        artifacts:
+        - name: spartacus-file
+          path: /tmp/output.nc
+        parameters:
+        - name: variable
+      script:
+        image: ghcr.io/oscipal/image_zarr:latest
+        source: |-
+          import os
+          import sys
+          sys.path.append(os.getcwd())
+          import json
+          try: variable = json.loads(r'''{{inputs.parameters.variable}}''')
+          except: variable = r'''{{inputs.parameters.variable}}'''
+
+          import xarray as xr
+          import numpy as np
+          import zarr
+          import datetime
+          fill_value = -999
+          artifact_path = '/tmp/output.nc'
+          today = datetime.date.today() - datetime.timedelta(days=3)
+          year = today.strftime('%Y')
+          ds_nc = xr.open_dataset(artifact_path, mask_and_scale=False).load()
+          zarr_path = '/eodc/products/eodc/geosphere_spartacus/SPARTACUS.zarr'
+          store = zarr.storage.LocalStore(zarr_path)
+          group = zarr.group(store=store)
+          zarr.consolidate_metadata(store)
+          data = ds_nc[variable].values
+          ref_date = np.datetime64('1961-01-01')
+          start_date = np.datetime64(f'{year}-01-01')
+          start_idx = int((start_date - ref_date) / np.timedelta64(1, 'D'))
+          num_days = data.shape[0]
+          end_idx = start_idx + num_days
+          group[variable][start_idx:end_idx, :, :] = data
+        command:
+        - python
+        volumeMounts:
+        - name: eodc-mount
+          mountPath: /eodc
+    - name: workflow
+      steps:
+      - - name: prepare-zarr
+          template: prepare-zarr
+      - - name: parallel-pipelines
+          template: pipeline
+          withParam: '["TX", "TN", "RR", "SA"]'
+          arguments:
+            parameters:
+            - name: args
+              value: '{{item}}'
+    - name: prepare-zarr
+      inputs:
+        parameters:
+        - name: store_path
+          default: /eodc/products/eodc/geosphere_spartacus/SPARTACUS.zarr
+      script:
+        image: ghcr.io/oscipal/image_zarr:latest
+        source: |-
+          import os
+          import sys
+          sys.path.append(os.getcwd())
+          import json
+          try: store_path = json.loads(r'''{{inputs.parameters.store_path}}''')
+          except: store_path = r'''{{inputs.parameters.store_path}}'''
+
+          import datetime
+          import numpy as np
+          import zarr
+          now = datetime.datetime.now()
+          now_np = np.datetime64(now).astype('datetime64[D]')
+          origin = np.datetime64('1961-01-01').astype('datetime64[D]')
+          new_shape = int((now_np - origin).astype(int))
+          new_extent = np.arange(0, new_shape, 1)
+          store = zarr.storage.LocalStore(store_path)
+          group = zarr.group(store=store)
+          array_names = set(group.array_keys())
+          coords = {'time', 'x', 'y'}
+          data_arrays = array_names - coords
+          group['time'].resize(new_shape)
+          for array in data_arrays:
+              group_shape = group[array].shape
+              group[array].resize((new_shape, group_shape[1], group_shape[2]))
+          zarr.consolidate_metadata(store)
+          store = zarr.storage.LocalStore(store_path)
+          group = zarr.group(store=store)
+          group['time'][:] = new_extent
+        command:
+        - python
+        volumeMounts:
+        - name: eodc-mount
+          mountPath: /eodc
+    volumes:
+    - name: eodc-mount
+      persistentVolumeClaim:
+        claimName: eodc-nfs-claim
+    securityContext:
+      runAsGroup: 71473
+      runAsUser: 74268
